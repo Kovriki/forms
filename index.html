@@ -3,23 +3,177 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="san-francisco.css">
     <style media="screen">
       *{
         box-sizing:border-box;
       }
-      input{}
+html{
+  margin:0;
+  padding:0;
+}
+      form > p,
+      form > span,
+      form > hr,
+      form > h3{
+        display: block;
+        width: 460px;
+        position: relative;
+        margin: 10px auto;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="password"],
+
+
+        select{
+          display: block;
+          width: 460px;
+          position: relative;
+          margin: 10px auto;
+          height: 46px;
+          padding: 0 18px;
+          font-size: 17px;
+          border-radius: 4px;
+          border: 1px solid #ddd;
+        }
+
+
         hr{
           width: 1100px;
-          
+          display: block;
+          margin:15px auto;
+          border: none;
+          border-bottom: solid 1px #ddd;
         }
+        button {
+      font-size: 17px;
+      line-height: 1.47059;
+      font-weight: 400;
+      letter-spacing: -.022em;
+      font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+      background-color: #0070c9;
+      background: linear-gradient(#42a1ec,#0070c9);
+      border: 1px solid #07c;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      min-width: 30px;
+      padding: 4px 15px;
+      text-align: center;
+      white-space: nowrap;
+      margin: 15px auto;
+    }
+    .form-split{
+      width: 460px;
+      position: relative;
+      margin: 10px auto;
+      display: flex;
+      justify-content:space-between;
+
+    }
+    .form-split input{
+      width: 220px;
+      margin: 0;
+      display: inline-block;
+    }
+ .radio-list{
+   width: 460px;
+   position: relative;
+   margin: 15px auto;
+   display: block;
+   /* padding-left: 20px; */
+ }
+
+ .radio-list > * {
+  width: auto;
+  display: inline-block;
+  margin-right: 15px;
+ }
+    /* lable.checkbox-list{
+      width: 460px;
+      position: relative;
+      margin: 10px auto;
+      display: block;
+      padding-left: 20px;
+    } */
+    .checkbox-list{
+      width: 460px;
+      position: relative;
+      margin: 15px auto;
+      display: block;
+      padding-left: 20px;
+    }
+    .checkbox-list input{
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .checkbox-list input{
+      position: block;
+      font-size: 14px;
+      color: #999;
+    }
+    nav{
+      position: relative;
+      display: inline-block;
+      background: rgba(255, 0, 0, 0.5);
+    }
+    nav > div{
+      width: 1024px;
+      display: block;
+
+    }
+    .menu-search{
+      display: none;
+    }
+    .menu-items{
+      display: flex;
+      justify-content: space-between;
+    }
+    .menu-items a{
+      line-height: 46px;
+      color: white;
+      opacity: .8;
+      text-decoration: none;
+    }
     </style>
   </head>
   <body>
+
+  <nav>
+    <div class="menu-items">
+      <a href="#">Logo</a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#">Watch</a>
+      <a href="#">TV</a>
+      <a href="#">Music</a>
+      <a href="#">Support</a>
+      <a href="#">Search</a>
+      <a href="#">Cart</a>
+    </div>
+    <div class="menu-search">
+
+    </div>
+  </nav>
+
+
+
+
+
     <form class="" action="index.html" method="post">
     <p>One Apple ID is all you need to access all Apple services.
 Already have an Apple ID? <a href="#">Find it here</a></p>
-    <input type="text" name="" value="">
-    <input type="password" name="" value="">
+<div class="form-split">
+
+      <input type="text" name="" value="">
+      <input type="password" name="" value="">
+</div>
+
     <h3>COUNTRY / REGION</h3>
     <select class="" name="">
       <option value="">United States</option>
@@ -44,7 +198,7 @@ Already have an Apple ID? <a href="#">Find it here</a></p>
 </select>
 <input type="tel" name="" value="" placeholder="Phone number">
 <span>Be sure to enter a phone number you can always access. It will be used to verify your identity any time you sign in on a new device or web browser. Messaging or data rates may apply.</span>
-<div class="">
+<div class="radio-list">
   <p>Verfy with:</p>
 
 <input type="redio" name="" value="">
