@@ -10,26 +10,31 @@
         body{
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
         }
-        table{
+        form{
+          width: 100%;
+        }
+        table, #new_row{
           width: 100%;
           border-collapse: collapse;
+          font-size: 14px;
         }
-        th,td {
+        th,td, #new_row > * {
           border: 1px solid #ddd;
           text-align: left;
           font-weight: 400;
           height: 32px;
           padding: 5px 8px 6px;
-          width: auto;
           font-size: 16px;
         }
         th:first-child,
-        td:first-child{
+        td:first-child,
+        #new_row > *:first-child{
           border-left: none;
-          width: 10%;
+          width: calc(10% - 32px);
         }
         th:last-child,
-        td:last-child{
+        td:last-child,
+        #new_row > *:last-child{
           border-right: none;
           width: 32px;
         }
@@ -40,7 +45,8 @@
           background-color: #eee;
           cursor: pointer;
         }
-        td:nth-of-type(2){
+        td:nth-of-type(2),
+        #new_row > *:nth-child(2){
           font-weight: 500;
         }
         td span {
@@ -63,9 +69,42 @@
         .sp_yellow{
           background-color: rgba(233, 168, 0, 0.2);
         }
+        #new_row{
+          display: flex;
+          /* width: 100vw; */
+        }
+        #new_row > * {
+          display: table-cell;
+          -webkit-appearance:none;
+          border-radius: 0;
+        }
+        #new_row > *:focus {
+          outline: none;
+        }
+        #new_row >*:first-child {
+          width: calc(10% - 32px);
+        }
     </style>
     <script type="text/javascript">
+        $(document).ready(function(){
+          let week;
+          let name_of;
+          let date;
+          let dysc;
+          let type;
+          $("#new_row button").click(function(){
+            week = $('[name="week"]').val();
+            name_of = $('[name="name_of"]').val();
+            date = $('[name="date"]').val();
+            dysc = $('[name="dysc"]').val();
+            type = $('[name="type"]').val();
 
+
+
+            $(".test").html(week+ ',' +name_of+ ',' +date+ ',' +dysc+ ',' +type);
+            $('#new_row' input).val("");
+          })
+        });
     </script>
   </head>
   <body>
@@ -150,7 +189,7 @@
     </tr>
       </tbody>
     </table>
-    <form class="" >
+    <form id="new_row" >
       <input type="text" name="" value="">
       <input type="text" name="" value="">
       <input type="text" name="" value="">
@@ -160,6 +199,10 @@
       <select class="" name="">
         <option value="">Воркшоп</option>
       </select>
+      <button type="button" name="button">+</button>
     </form>
+    <div class="test">
+
+    </div>
   </body>
 </html>
