@@ -2,11 +2,19 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css">
     <title></title>
     <style media="screen">
     *{
       box-sizing: border-box;
+    }
+    *:focus{
+      outline: none;
+    }
+    html,body{
+      margin: 0;
+      padding: 0;
     }
     form > p,
     form > span,
@@ -58,6 +66,20 @@
           text-align: center;
           white-space: nowrap;
         }
+        nav{
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 44px;
+          background: rgba(0, 0, 0, 1);
+        }
+        nav > div {
+          width: 1024px;
+          display: block;
+          position: relative;
+          height: 100%;
+          margin: 0 auto;
+        }
         .form-split{
           display: flex;
           width: 460px;
@@ -94,9 +116,167 @@
           display: inline-block;
           margin-right: 15px;
         }
+        .menu-search{
+          display: flex;
+          justify-content: space-between;
+          width: 600px;
+          margin: 0 auto;
+
+
+        }
+        .menu-search input{
+          margin:0;
+          height: 44px;
+          font-size: 17px;
+          background: transparent;
+          border:none;
+          color:white;
+        }
+        .menu-items{
+          /* display: none; */
+          display: flex;
+          justify-content: space-between;
+        }
+        .menu-items a{
+          line-height: 46px;
+          color: white;
+          opacity: .8;
+          text-decoration: none;
+        }
+        .banner{
+          display: block;
+          width: 100%;
+          height: 240px;
+          background: #111;
+          overflow: hidden;
+          position: relative;
+          margin: 0 0 ;
+        }
+        .banner h1 {
+          text-align: center;
+          color: white;
+          margin-top: 100px;
+          position: absolute;
+          width: 100%;
+          z-index: 10;
+        }
+        .color-block{
+          position: absolute;
+          display: block;
+          width: 400px;
+          height: 400px;
+          left:calc(50% - 200px);
+          top: -50px;
+          animation: colors 60s linear infinite;
+
+        }
+        .circle{
+          position: absolute;
+          display: block;
+          width: 200px;
+          height: 200px;
+          opacity: .8;
+          filter: blur(300px);
+          border-radius: 100%;
+        }
+        .cl0{
+          background: #c10101;
+          top: 0;
+          left: 20%;
+        }
+        .cl1{
+          background: #0101c1;
+          top: 0;
+          right: 0;
+        }
+        .cl2{
+          background: #c101c1;
+          bottom: 30%;
+          left: 0;
+        }
+        .cl3{
+          background: #c1c101;
+          bottom: 0;
+          right: 0;
+        }
+        .cross{
+          position: absolute;
+          display: block;
+          width: 1px;
+          height: 20px;
+          background: #aaa;
+          top: 12px;
+        }
+        .cross-1{transform: rotate(45deg);}
+        .cross-2{transform: rotate(-45deg);}
+        @keyframes colors {
+          0%{transform: rotate(0deg);}
+          100%{transform: rotate(360deg);}
+        }
+        .icon{
+          width: 20px;
+          height: 44px;
+          display: block;
+          position: relative;
+          background-position: 0 0;
+          background-repeat: no-repeat;
+
+        }
+        #apple{
+          background-image: url(images/apple.svg);
+        }
+        #search{
+          background-image: url(images/search.svg);
+          background-size: cover;
+        }
+        #bag{
+          background-image: url(images/bag.svg);
+        }
+        .hidden{
+          display: none;
+        }
+        .fade{
+          opacity: 0;
+        }
     </style>
   </head>
   <body>
+    <nav>
+      <div class="menu-items">
+        <a class="icon" id="apple" href="https://www.apple.com/"></a>
+        <a href="https://www.apple.com/mac/">Mac</a>
+        <a href="https://www.apple.com/ipad/">iPad</a>
+        <a href="https://www.apple.com/iphone/">iPhone</a>
+        <a href="https://www.apple.com/watch/">Watch</a>
+        <a href="https://www.apple.com/tv/">TV</a>
+        <a href="https://www.apple.com/music/">Music</a>
+        <a href="https://support.apple.com/">Support</a>
+        <a class="icon" id="search" href="#"></a>
+        <a class="icon" id="bag" href="#"></a>
+      </div>
+      <div class="menu-search">
+        <span class="icon" id="search"></span>
+        <input type="text" placeholder="Search apple.com">
+        <a href="#">
+          <span class="cross cross-1"></span>
+          <span class="cross cross-2"></span>
+        </a>
+      </div>
+    </nav>
+
+
+    <div class="banner">
+      <div class="color-block">
+        <div class="circle cl0"></div>
+        <div class="circle cl1"></div>
+        <div class="circle cl2"></div>
+        <div class="circle cl3"></div>
+      </div>
+      <h1>Create Your Apple ID</h1>
+    </div>
+
+
+
 <form class="" action="index.html" method="post">
   <p>One Apple ID is all you need to access all Apple services.
   Already have an Apple ID? <a href="">Find it here </a></p>
