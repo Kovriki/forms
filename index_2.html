@@ -136,6 +136,7 @@
           /* display: none; */
           display: flex;
           justify-content: space-between;
+          transition: .4s;
         }
         .menu-items a{
           line-height: 46px;
@@ -229,6 +230,12 @@
           background-image: url(images/search.svg);
           background-size: cover;
         }
+        #search_2{
+          background-image: url(images/search.svg);
+          background-position: bottom;
+
+          background-size: cover;
+        }
         #bag{
           background-image: url(images/bag.svg);
         }
@@ -239,6 +246,22 @@
           opacity: 0;
         }
     </style>
+    <script>
+        $(document).ready(function(){
+          $(".menu-items #search., icon_close ").click(function(){
+            $(this).parent().addClass("fade")
+             setTimeout(function(){
+               $(".menu-items, .menu-search").toggleClass("hidden");
+             },500);
+             setTimeout(function(){
+               if($(".menu-items").hasClass("hidden")){
+                 
+               }
+               $(".menu-search").removeClass("fade");
+             },600);
+          })
+        });
+    </script>
   </head>
   <body>
     <nav>
@@ -254,10 +277,10 @@
         <a class="icon" id="search" href="#"></a>
         <a class="icon" id="bag" href="#"></a>
       </div>
-      <div class="menu-search">
-        <span class="icon" id="search"></span>
+      <div class="menu-search hidden fade">
+        <span class="icon" id="search_2"></span>
         <input type="text" placeholder="Search apple.com">
-        <a href="#">
+        <a  class="icon icon_close" href="#">
           <span class="cross cross-1"></span>
           <span class="cross cross-2"></span>
         </a>
