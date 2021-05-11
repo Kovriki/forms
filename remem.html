@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
+    @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;1,900&display=swap');
     /* em - считает родительский */
     /* rem - считает корневой */
         html{
           font-size: 10px;
+          font-family: 'Archivo', sans-serif;
         }
         h1{
           font-size: 3em; /* for b — 20px x 3 = 60px  */
@@ -73,6 +75,11 @@
                 height: 42.3em;
                 background: #ccc;
                 vertical-align: top;
+                overflow: hidden;
+
+                background-image: url("images/lady.png");
+                background-size: 50em;
+                /* filter: blur(.3em); */
               }
               .a4 {
                 font-size: 1em;
@@ -83,19 +90,111 @@
               .a6 {
                 font-size: .25em;
               }
+              /* .pic{
+                width: 40em;
+                height: 70em;
+                background-image: url("images/lady.png");
+                background-size: 50em;
+                filter: blur(.1em);
+                display: block;
+                z-index: 10;
+              } */
+              .blank p {
+                display: block;
+                font-size:3em;
+                color: #ddd;
+                filter: none;
+              }
+              .h{
+                /* font-size: 4em; */
+              }
+              span{
+                font-size: 5em;
+                width: 2em;
+                height: 3em;
+                display: block;;
+                position: absolute;
+                top:-.3em;
+                left: -.5em;
+                line-height: .4em;
+                color: white;
+              }
+              p {
+                font-size: 2rem;
+                color: #eee;
+                width:
+              }
+              .text{
+                font-size: 2em;
+                padding-top: 2em;
+                width: 5em;
+                height: auto;
+                color: #ad8c52;
+                line-height: .8em;
 
+                /* margin: 0; */
+                /* background-color: #ccc; */
+              }
+              h6 {
+                font-size: 3em;
+                padding: 1em;
+                margin: 0;
+                display: block;
+                position: relative;
+              }
+              h4 {
+                font-size: 5em;
+                padding: 1em;
+                margin: 0;
+                display: block;
+                position: relative;
+                top: -.4em;
+              }
+              .text p {
+                font-size: 1em;
+                padding: 1em;
+                margin: 0;
+                position: relative;
+                top: -2em;
+              }
 
 
     </style>
   </head>
   <body>
     <div class="blank a4">
-
+          <p>lady</p>
+          <div class="h">
+            <span>LADY DEMETRESCU lady demetrescu</span>
+            <div class="text">
+              <h6>Lady</h6>
+              <h4>Alcina Dimitrescu</h4>
+              <p> (オルチーナ・ドミトレスク oruchīna domitoresuku?) was a mutant human countess and the matriarch of the Dimitrescu family.</p>
+            </div>
+          </div>
     </div>
     <div class="blank a5">
+        <p>lady</p>
+        <div class="h">
+          <span>LADY DEMETRESCU lady demetrescu</span>
+          <div class="text">
+            <h6>Lady</h6>
+            <h4>Alcina Dimitrescu</h4>
+            <p> (オルチーナ・ドミトレスク oruchīna domitoresuku?) was a mutant human countess and the matriarch of the Dimitrescu family.</p>
+          </div>
+        </div>
 
     </div>
     <div class="blank a6">
+        <p>lady</p>
+        <div class="h">
+          <span>LADY DEMETRESCU lady demetrescu</span>
+          <div class="text">
+            <h6>Lady</h6>
+            <h4>Alcina Dimitrescu</h4>
+            <p> (オルチーナ・ドミトレスク oruchīna domitoresuku?) was a mutant human countess and the matriarch of the Dimitrescu family.</p>
+          </div>
+        </div>
 
     </div>
 
