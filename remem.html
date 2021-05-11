@@ -3,12 +3,134 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style media="screen">
+    /* em - считает родительский */
+    /* rem - считает корневой */
+        html{
+          font-size: 10px;
+        }
+        h1{
+          font-size: 3em; /* for b — 20px x 3 = 60px  */
+          background: #777;
+          width: 12em; /* 60px x 12 */ /* тут ширина спрашивает числовое значение размера шрифта */
+          padding: .4em .7rem; /* расстояние между строками можно делать в em, а отступ от края в rem, чтобы был ровный край */
+        }
+        p{
+          font-size: 1em;
+        }
+        .b{
+          font-size: 2em;
+          background: #ddd;
+        }
+        .d{
+          font-size: 5em;
+        }
+        .c{
+          font-size: 1.5em;
+          background: #bbb;
+
+        }
+        .c p{
+          font-size: 2em;
+        }
+         .blue-c{
+           background: blue;
+           border-radius: 50%;
+           position: relative;
+         }
+         .red-c{
+           font-size: 0.5em;
+           position: absolute;
+           top: .5em;
+           left: .5em;
+           background: red;
+         }
+         .main-c{
+            width: 3em;
+            height: 3em;
+            border-radius: 50%;
+            display: block;
+         }
+         .s{
+          font-size: 1em;
+         }
+         .m{
+           font-size: 2em;
+         }
+        .l{
+          font-size: 3em;
+        }
+
+
+        html {
+                font-size: 16px;
+              }
+        .blank {
+                display: inline-block;
+                position: relative;
+                font-size: 1em;
+                width: 30em;
+                height: 42.3em;
+                background: #ccc;
+                vertical-align: top;
+              }
+              .a4 {
+                font-size: 1em;
+              }
+              .a5 {
+                font-size: .5em;
+              }
+              .a6 {
+                font-size: .25em;
+              }
+
+
+
+    </style>
   </head>
   <body>
-    <div class="b">
-      <h1></h1>
-      <p></p>
+    <div class="blank a4">
+
+    </div>
+    <div class="blank a5">
+
+    </div>
+    <div class="blank a6">
+
     </div>
 
+
+
+
+
+
+
+
+    <div class="s">
+      <div class="blue-c main-c">
+        <div class="red-c main-c"></div>
+      </div>
+    </div>
+    <div class="m">
+      <div class="blue-c main-c">
+        <div class="red-c main-c"></div>
+      </div>
+    </div>
+    <div class="l">
+      <div class="blue-c main-c">
+        <div class="red-c main-c"></div>
+      </div>
+    </div>
+
+
+
+      <div class="b">
+        <h1>Test</h1>
+        <p>Test</p>
+      </div>
+    <div class="c">
+      <h1>Test</h1>
+      <p>Test</p>
+    </div>
   </body>
 </html>
